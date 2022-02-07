@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+	margin: 0;
+	padding: 0;
+}
+main{
+	height: 100vw;
+}
+.grid{
+	display: grid;
+  	grid-template-columns: 1fr 1fr 1fr;
+}
+.mainsl_active{
+	height: 40vh;
+	background-color: blue;
+	box-sizing: border-box;
+}
+.pink:hover, .blue:hover{
+	background-color: gray;
+}
+a{
+	cursor: pointer;
+	text-decoration: none;
+	margin: 0;
+}
+.pink{
+	background-color: #ea8af9;
+	transition: 0.3s;
+}
+.blue{
+	background-color: #8cffde;
+	transition: 0.3s;
+}
+@media (max-width: 768px) {
+  .main{
+  	height: auto;
+  }
+  .grid{
+  	display: flex;
+  	flex-direction: column;
+  	width: 100%;
+  }
+}
+	</style>
+</head>
+<body>
+	<main>
+		<div class="grid">
+			<a href="">
+				<div class="mainsl_active pink" style="background-image: url(img-01.jpg);background-size: cover;"></div>
+			</a>
+			<a href="">
+				<div class="mainsl_active blue" style="background-image: url(img-02-preset-2.jpg);background-size: cover;"></div>
+			</a>
+			<a href="">
+			<div class="mainsl_active pink" style="background-image: url(img-03-preset-2.jpg);background-size: cover;">	</div>
+			</a>
+		</div>
+		<div class="grid">
+			<a href="">
+				<div class="mainsl_active blue"  style="background-image: url(img-04-preset-2.jpg);background-size: cover;"></div>
+			</a>
+			<a href="">
+				<div class="mainsl_active pink" style="background-image: url(img-05-preset-2.jpg);background-size: cover;">	</div>
+			</a>
+			<a href="">
+				<div class="mainsl_active blue" style="background-image: url(img-06-preset-2.jpg);background-size: cover;">	</div>
+			</a>
+		</div>
+	</main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+
+}
+main{
+	height: 100vw;
+}
+.gog{
+	background-color: #00d6b6;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+.grid{
+	display: grid;
+  	grid-template-columns: 1fr 1fr 1fr;
+}
+.mainsl_active{
+	height: 40vh;
+	background-color: blue;
+	box-sizing: border-box;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	cursor: pointer;
+}
+.block_lesson{
+	width: 25vw;
+	height: auto;
+	padding: 20px 50px 55px 25px;
+	box-sizing: border-box;
+	background-color: white;
+	box-shadow: 0px 0px 10px 4px rgb(150, 150, 150);
+	border-radius: 7px;
+	display: flex;
+	justify-content: center;
+	transition: 0.5s;
+}
+.h{
+	font-weight: normal;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 25px;
+	font-family: 'calibri';
+}
+.dt{
+	font-size: 22px;
+	padding: 5px;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: 'calibri';
+}
+.dd{
+	font-size: 20px;
+	font-family: 'calibri';
+}
+.block_a{
+	width: 30vw;
+	height: auto;
+	padding: 40px;
+	box-sizing: border-box;
+	background-color: white;
+	box-shadow: 0px 0px 10px 4px rgb(150, 150, 150);
+	border-radius: 7px;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+}
+a{
+	color: rgb(32, 32, 32);
+	text-decoration: none;
+	font-size: 25px;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	font-family: 'calibri';
+	text-shadow: 1px 1px 0px rgb(180, 180, 180);
+}
+.hil{
+	font-size: 22px;
+	margin: 2px;
+	font-family: 'calibri';
+	text-align: center;
+}
+.dd_tree{
+	font-size: 18px;
+	margin: 5px;
+	font-family: 'calibri';
+}

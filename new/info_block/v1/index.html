@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'calibri';
+}
+body{
+	background-color: gray;
+}
+.info_block{
+	width: 100%;
+	height: auto;
+	background: linear-gradient(to top right, #d874d9 10%, #33edaa 90%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.a_block{
+	width: 35%;
+	height: auto;
+	background-color: #9bfcff;
+	margin: 20px 0;
+	padding: 35px;
+	border-radius: 20px;
+	color: #05003e;
+}
+.title_h3{
+	text-align: center;
+	padding-bottom: 10px;
+	font-size: 1.5em;
+}
+ul {
+    list-style: none;
+	font-size: 1.2em;
+}
+dd{
+	font-size: 1.2em;
+}
+p{
+	font-size: 1.2em;
+}
+ul li:before {
+    content:  "-";
+    position: relative;
+    left:     -5px;
+}
+.blue{
+	background-color: #eac7ff;
+	margin-left: 150px;
+}
+.green{
+	margin-right: 150px;
+}
+@media (max-width: 768px) {
+  .a_block{
+  	width: 80%;
+  }
+  .blue{
+	margin-left: 0;
+}
+.green{
+	margin-right: 0;
+}
+}
+	</style>
+</head>
+<body>
+	<div class="info_block">
+		<div class="a_block blue">
+			<h3 class="title_h3">Deutsch live & online für</h3>
+			<ul>
+				<li>Erwachsene</li>
+				<li>Kids & Jugendliche</li>
+				<li>Individual</li>
+				<li>In Kleingruppen</li>
+			</ul><br>
+			<dd>7 Tage die Woche</dd>
+			<dd>07:00-23:00</dd>
+		</div>
+		<div class="a_block green">
+			<h3 class="title_h3">Level A 1 – C2</h3>
+			<dd>Wir machen Sie fit für</dd>
+			<ul>
+				<li>Schule</li>
+				<li>Studium</li>
+				<li>Arbeit</li>
+				<li>Leben im deutschsprachigen Raum</li>
+			</ul>
+		</div>
+		<div class="a_block blue">
+			<h3 class="title_h3">Edunionclass</h3>
+			<ul>
+				<li>GER-CEFR-orientiert</li>
+				<li>Digital & flexibel</li>
+				<li>Individualisiert & interaktiv</li>
+				<li>Erfolgs- und zukunftsorientiert</li>
+				<li>Macht Spaß</li>
+			</ul>
+		</div>
+		<div class="a_block green">
+			<h3 class="title_h3">Lehrer sind hochqualifiziert, erfahren, freundlich, visionär. Sie haben das Ziel, wir zeigen den Weg.</h3>
+			<p>Das Konzept des Unterrichts entspricht den Anforderungen des Gemeinsamen Europäischen Referenzrahmens für Sprachen (GER-CEFR).Das bedeutet für Sie: Ihre Deutschkenntnisse werden weltweit anerkannt. Videoplattform in Profiqualität. Cloud-basierter Unterricht gibt die Möglichkeit, den Lernstoff jederzeit abzurufen.</p>
+		</div>
+	</div>
+</body>
+</html>

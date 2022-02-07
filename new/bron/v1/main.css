@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'calibri';
+}
+.price_block{
+	width: 100%;
+	height: auto;
+	background: linear-gradient(to top right, #d874d9 10%, #33edaa 90%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.text_block{
+	width: 90%;
+	height: auto;
+	margin: 5%;
+	background-color: white;
+	border-radius: 30px;
+	padding: 40px;
+}
+.radio_type{
+	display: flex;
+	justify-content: space-around;
+}
+.radio_block{
+	width: 20%;
+	height: auto;
+	padding: 15px;
+	border-radius: 15px;
+	border: 2px solid black;
+}
+.dd_block{
+	margin-left: 10px;
+}
+.h2_price{
+	text-align: center;
+	font-size: 25px;
+}
+.text_price{
+	text-align: center;
+	width: 50%;
+	font-size: 20px;
+	margin: 20px;
+}
+.info_text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.pos_but{
+	display: flex;
+	justify-content: center;
+}
+.but_price{
+	width: auto;
+	height: 70px;
+	padding:  0 30px;
+	font-size: 16px;
+	border-radius: 70px;
+	background: lightgreen;
+	border: 2px solid green;
+	cursor: pointer;
+	transition: 0.4s;
+	margin-top: 30px; 
+}
+.but_price:hover{
+	border: 2px solid lightgreen;
+}
