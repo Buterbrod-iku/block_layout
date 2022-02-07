@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'calibri';
+}
+body{
+	overflow-x: hidden;
+}
+main{
+	width: 110vw;
+	height: 60vh;
+	display: flex;
+	margin-left: -5vw;
+	transition: 1.5s;
+}
+.left{
+	width: 50%;
+	height: 100%;
+	right: -10%;
+	background-color: green;
+	transform: translateX(0) skewX(-10deg);
+	transform-origin: top, right;
+	transition: 1.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.p_left{
+	font-size: 30px;
+	transition: 0.5s; 
+}
+.right{
+	width: 50%;
+	height: 100%;
+	background-color: blue;
+	transform: translateX(0) skewX(-10deg);
+	transform-origin: right;
+	transition: 1.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.p_right{
+	font-size: 30px;
+	transition: 0.5s;
+}
+.left:hover{
+	width: 110vw;
+	transform: none;
+}
+.right:hover {
+	width: 110vw;
+	transform: none;
+}

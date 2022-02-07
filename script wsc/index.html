@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<input type="file" id="file"/>
+  <button>hello</button>
+
+<script>
+document.querySelector('button').addEventListener('click', function() {
+      let file = document.getElementById('file').files[0];
+      let reader = new FileReader();
+	    let check_pattern = 1;
+      let check_html = '</html>';
+      let check_lang = '<html lang="';
+      let check_div = '<div';
+      let check_h = '<h';
+      let check_img = '<img';
+      let check_alt = 'alt="';
+      let check_a = '<a ';
+      let check_nav = '<nav';
+      let check_header = '<header';
+      let check_footer = '<footer';
+      let check_main = '<main';
+      let check_role = 'role="';
+      reader.readAsText(file);
+      reader.onload = function() {
+        while (check_pattern != 2) {
+          if (reader.result.indexOf(check_html) !== -1) {
+            if (reader.result.indexOf(check_lang) !== -1){
+              if (reader.result.indexOf(check_div) !== -1) {
+                var div = reader.result.match(/<div/gi).length;
+                if (reader.result.indexOf(check_h) !== -1) {
+                  var h = reader.result.match(/<h1/,/<h2/,/<h3/,/h4/,/h5/,/h6/gi).length;
+                  if (reader.result.indexOf(check_img) !== -1) {
+                    var img = reader.result.match(/<img/gi).length;
+                    var alt = reader.result.match(/alt="/gi).length;
+                    var c = img - alt;
+                    if (img != alt){
+                      var alt_error = "У вас " + c + "изображений(-я) без использования alt. Это прививедёт к трудностя описания img для screenreader";
+                    } else {
+                      let img = alt;
+                    }
+                    if (reader.result.indexOf(check_a) !== -1) {
+                      var n = reader.result.match(/<a /gi).length;
+                      var silk = "Пустых ссылок: ";
+                      if (reader.result.indexOf(check_nav) !== -1) {
+                            if (reader.result.indexOf(check_role) !== -1) {
+                              check_pattern++;
+                            } else {
+                              var role = "Не забывайте использовать атрибут role для логического разграничения сайта.";
+                              check_pattern++;
+                            }
+                          } else {
+                            let check_nav = "</html>";
+                          }
+                    } else{
+                      let check_a = "</html>";
+                    }
+                  } else {
+                    let check_img = "</html>";
+                  }
+                } else {
+                  let error_h = "Используйте заголоки! Так легче ориентироваться по сайту и screenreader'у будет легче выстроить структуру сайта";
+                  let check_h = "</html>";
+                }
+              } else {
+                let check_div = "</html>";
+              }
+            } else {
+              console.log("пропишите атрибут lang в тег html для устранения возможных проблем со screenreader'ом")
+              let check_lang = "</html>";
+            }
+          } else {
+            var close = "Загрузите HTML файл";
+          }
+          console.log(reader.result);
+        }
+      }
+      reader.onerror = function() {
+        console.log(reader.error);
+      }
+})
+</script>
+</body>
+</html>

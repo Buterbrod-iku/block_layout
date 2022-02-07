@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>home</title>
+</head>
+<body>
+	<canvas width="500" height="500" id="canvas"></canvas>
+
+<script type="text/javascript">
+	const canvas = document.getElementById("canvas");
+	const ctx = canvas.getContext("2d");
+
+	let cw = window.innerWidth;
+	let ch = window.innerHeight;
+	let j = 1
+	canvas.width = cw;
+	canvas.height = ch;
+
+	window.onload = function() {
+	    const canvas = document.getElementById("canvas");
+		const ctx = canvas.getContext("2d");
+	    setTimeout("update()", 2000);
+	}
+
+let param_x = Math.random()*(cw)
+let param_y = Math.random()*(ch)
+
+	function create() {
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		ctx.beginPath();
+		let j = 1
+		ctx.strokeRect(param_x,param_y,j, j);
+		ctx.lineStyle = "#109bfc";
+		ctx.lineWidth = 1;
+		ctx.stroke();
+
+		j ++
+		setTimeout("create()", 200);
+	}
+
+	let update = () => {
+	let squarePosition_x = Math.random()*cw
+	let squarePosition_y = Math.random()*ch
+	
+	let t = 0
+	while (t < 10){
+		create()
+		t = t + 1
+	}
+
+	setTimeout("update()", 2000);
+	}
+	
+
+</script>
+</body>
+</html>

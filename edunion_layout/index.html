@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<main>
+		<div class="grid">
+			<div class="active" onclick="one()" style="background-image: url(img-01.jpg);background-size: cover;">
+				<h3>
+					Unterricht<br>
+					Mit Hirn, Charme und Laune!
+				</h3>
+			</div>
+			<div class="active" onclick="two()" style="background-image: url(img-02-preset-2.jpg);background-size: cover;">
+				<h3>
+					Wie funktioniert das?
+				</h3>
+				<ul>
+					<li>4 Schritte zum Unterricht</li>
+					<li>die Freu(n)de bringen</li>
+					<li>zum Glück</li>
+					<li>zum neuen Leben</li>
+				</ul>
+			</div>
+			<div class="active" onclick="tree()" style="background-image: url(img-03-preset-2.jpg);background-size: cover;">
+				<h3>Lernstoff</h3>
+			</div>
+		</div>
+		<div class="gog"></div>
+		<div class="grid">
+			<div class="active" onclick="four()" style="background-image: url(img-04-preset-2.jpg);background-size: cover;">
+				<h3></h3>
+			</div>
+			<div class="active" onclick="five()" style="background-image: url(img-05-preset-2.jpg);background-size: cover;">
+				<h3></h3>
+			</div>
+			<div class="active" onclick="six()" style="background-image: url(img-06-preset-2.jpg);background-size: cover;">
+				<h3></h3>
+			</div>
+		</div>
+	</main>
+
+<script type="text/javascript">
+let alert_item = document.createElement('div');
+alert_item.className = 'alert';
+let glav_div = document.createElement('div');
+glav_div.className = 'glav_div';
+const lol = document.getElementsByClassName('gog')[0];
+
+function pad(){
+	document.getElementsByClassName('gog')[0].style.padding = '50px 0';
+}
+
+
+	function one(){
+		glav_div.innerHTML = '';
+		if (alert_item.innerHTML == '') {
+			lol.append(glav_div);
+			pad()
+			document.getElementsByClassName('glav_div')[0].style.display = 'flex';
+			document.getElementsByClassName('glav_div')[0].style.justifyContent = 'space-around';
+			document.getElementsByClassName('glav_div')[0].style.flexDirection = 'row';
+			alert_item.innerHTML = "";
+			glav_div.append(alert_item);
+			document.getElementsByClassName('alert')[0].style.display = 'none';
+
+			let block_lesson_1 = document.createElement('div');
+			let block_lesson_2 = document.createElement('div');
+			block_lesson_1.className = "block_lesson";
+			block_lesson_2.className = "block_lesson";
+
+			let dl_1 = document.createElement('dl');
+			const h_1 = document.createElement("h4");
+			h_1.className = "h";
+			h_1.innerHTML = "Einzelunterricht";
+			dl_1.append(h_1);
+			let dt_1 = document.createElement('dt');
+			dt_1.className = 'dt';
+			dt_1.innerHTML = "1:1 Unterricht";
+			dl_1.append(dt_1);
+
+			let dd_1 = document.createElement('dd');
+			dd_1.className = 'dd';
+			dd_1.innerHTML = "- individuell<br>- intensiv<br>- herausfordernd";
+			dl_1.append(dd_1);
+			
+			let dl_2 = document.createElement('dl');
+			const h_2 = document.createElement("h4");
+			h_2.className = "h";
+			h_2.innerHTML = "Gruppenunterricht";
+			dl_2.append(h_2);
+			let dt_2 = document.createElement('dt');
+			dt_2.className = 'dt';
+			dt_2.innerHTML = "Gruppe 2-4 Personen";
+			dl_2.append(dt_2);
+
+			let dd_2 = document.createElement('dd');
+			dd_2.className = 'dd';
+			dd_2.innerHTML = "- mit Teamgeist und Inspiration<br>- mit Synergieeffekt<br>- sie bringen Ihre Gruppe mit";
+			dl_2.append(dd_2);
+
+			block_lesson_1.append(dl_1);
+			block_lesson_2.append(dl_2);
+		
+			glav_div.append(block_lesson_1);
+			glav_div.append(block_lesson_2);
+		} else {
+			lol.append(glav_div);
+			pad()
+			document.getElementsByClassName('glav_div')[0].style.display = 'flex';
+			document.getElementsByClassName('glav_div')[0].style.justifyContent = 'space-around';
+			document.getElementsByClassName('glav_div')[0].style.flexDirection = 'row';
+			alert_item.innerHTML = "";
+			glav_div.append(alert_item);
+			document.getElementsByClassName('alert')[0].style.display = 'none';
+
+			let block_lesson_1 = document.createElement('div');
+			let block_lesson_2 = document.createElement('div');
+			block_lesson_1.className = "block_lesson";
+			block_lesson_2.className = "block_lesson";
+
+			let dl_1 = document.createElement('dl');
+			const h_1 = document.createElement("h4");
+			h_1.className = "h";
+			h_1.innerHTML = "Einzelunterricht";
+			dl_1.append(h_1);
+			let dt_1 = document.createElement('dt');
+			dt_1.className = 'dt';
+			dt_1.innerHTML = "1:1 Unterricht";
+			dl_1.append(dt_1);
+
+			let dd_1 = document.createElement('dd');
+			dd_1.className = 'dd';
+			dd_1.innerHTML = "- individuell<br>- intensiv<br>- herausfordernd";
+			dl_1.append(dd_1);
+			
+			let dl_2 = document.createElement('dl');
+			const h_2 = document.createElement("h4");
+			h_2.className = "h";
+			h_2.innerHTML = "Gruppenunterricht";
+			dl_2.append(h_2);
+			let dt_2 = document.createElement('dt');
+			dt_2.className = 'dt';
+			dt_2.innerHTML = "Gruppe 2-4 Personen";
+			dl_2.append(dt_2);
+
+			let dd_2 = document.createElement('dd');
+			dd_2.className = 'dd';
+			dd_2.innerHTML = "- mit Teamgeist und Inspiration<br>- mit Synergieeffekt<br>- sie bringen Ihre Gruppe mit";
+			dl_2.append(dd_2);
+
+			block_lesson_1.append(dl_1);
+			block_lesson_2.append(dl_2);
+		
+			glav_div.append(block_lesson_1);
+			glav_div.append(block_lesson_2);
+		}
+	}
+
+	function two() {
+		glav_div.innerHTML = '';
+		if (alert_item.innerHTML == '') {
+			lol.append(glav_div);
+			pad()
+			document.getElementsByClassName('glav_div')[0].style.display = 'flex';
+			document.getElementsByClassName('glav_div')[0].style.justifyContent = 'center';
+			alert_item.innerHTML = "";
+			glav_div.append(alert_item);
+			document.getElementsByClassName('alert')[0].style.display = 'none';
+
+			let block_lesson = document.createElement('div');
+			block_lesson.className = "block_a";
+
+			let sl = document.createElement('p');
+			sl.innerHTML = '<a href="">Anmelden/Registrieren</a><br><a href="">Antwort bekommen</a><br><a href="">Probeunterricht kaufen</a><br><a href="">Termin wählen</a>';
+
+			block_lesson.append(sl);
+		
+			glav_div.append(block_lesson);
+		} else {
+			lol.append(glav_div);
+			pad()
+			document.getElementsByClassName('glav_div')[0].style.display = 'flex';
+			document.getElementsByClassName('glav_div')[0].style.justifyContent = 'center';
+			alert_item.innerHTML = "";
+			glav_div.append(alert_item);
+			document.getElementsByClassName('alert')[0].style.display = 'none';
+
+			let block_lesson = document.createElement('div');
+			block_lesson.className = "block_a";
+
+			let sl = document.createElement('p');
+			sl.innerHTML = '<a href="">Anmelden/Registrieren</a><br><a href="">Antwort bekommen</a><br><a href="">Probeunterricht kaufen</a><br><a href="">Termin wählen</a>';
+
+			block_lesson.append(sl);
+		
+			glav_div.append(block_lesson);
+		}
+	}
+
+	function tree(){
+		glav_div.innerHTML = '';
+		if (alert_item.innerHTML == '') {
+			pad()
+			console.log('gog');
+			alert_item.innerHTML = "Unterricht";
+			glav_div.append(alert_item);
+
+			let dl = document.createElement('dl');
+
+			let dt = document.createElement('dt');
+			dt.className = 'dt';
+			dt.innerHTML = "kak kak kak kak kak kak kak kak kak";
+			dl.append(dt);
+
+			let dd = document.createElement('dd');
+			dd.className = 'dd';
+			dd.innerHTML = "klklklklklklklklklk";
+			dl.append(dd);
+
+			const lol = document.getElementsByClassName('gog')[0];
+			glav_div.append(dl);
+			lol.append(glav_div);
+		} else {
+			pad()
+			let dl = document.createElement('dl');
+
+			let dt = document.createElement('dt');
+			dt.className = 'dt';
+			dt.innerHTML = "kak kak kak kak kak kak kak kak kak";
+			dl.append(dt);
+
+			let dd = document.createElement('dd');
+			dd.className = 'dd';
+			dd.innerHTML = "klklklklklklklklklk";
+			dl.append(dd);
+
+			const lol = document.getElementsByClassName('gog')[0];
+			glav_div.append(dl)
+			lol.append(glav_div);
+		}
+	}
+
+	function four(){
+		glav_div.innerHTML = '';
+		if (alert_item.innerHTML == '') {
+			pad()
+			console.log('gog');
+			alert_item.innerHTML = "Unterricht";
+			glav_div.append(alert_item);
+
+			let dl = document.createElement('dl');
+
+			let dt = document.createElement('dt');
+			dt.className = 'dt';
+			dt.innerHTML = "hoh hoh hoh hoh hoh hoh hoh hoh";
+			dl.append(dt);
+
+			let dd = document.createElement('dd');
+			dd.className = 'dd';
+			dd.innerHTML = "lolololololololol";
+			dl.append(dd);
+
+			const lol = document.getElementsByClassName('gog')[0];
+			glav_div.append(dl);
+			lol.append(glav_div);
+		} else {
+			pad()
+			let dl = document.createElement('dl');
+
+			let dt = document.createElement('dt');
+			dt.className = 'dt';
+			dt.innerHTML = "hoh hoh hoh hoh hoh hoh hoh hoh";
+			dl.append(dt);
+
+			let dd = document.createElement('dd');
+			dd.className = 'dd';
+			dd.innerHTML = "lolololololololol";
+			dl.append(dd);
+
+			const lol = document.getElementsByClassName('gog')[0];
+			glav_div.append(dl)
+			lol.append(glav_div);
+		}
+	}
+	function five(){
+		glav_div.innerHTML = '';
+		if (alert_item.innerHTML == '') {
+			pad()
+			console.log('gog');
+			alert_item.innerHTML = "Unterricht";
+			glav_div.append(alert_item);
+
+			let dl = document.createElement('dl');
+
+			let dt = document.createElement('dt');
+			dt.className = 'dt';
+			dt.innerHTML = "Im Unterricht arbeiten wir mit ";
+			dl.append(dt);
+
+			let dd = document.createElement('dd');
+			dd.className = 'dd';
+			dd.innerHTML = "ffffffffffff";
+			dl.append(dd);
+
+			const lol = document.getElementsByClassName('gog')[0];
+			glav_div.append(dl);
+			lol.append(glav_div);
+		} else {
+			pad()
+			let dl = document.createElement('dl');
+
+			let dt = document.createElement('dt');
+			dt.className = 'dt';
+			dt.innerHTML = "Im Unterricht arbeiten wir mit ";
+			dl.append(dt);
+
+			let dd = document.createElement('dd');
+			dd.className = 'dd';
+			dd.innerHTML = "ffffffffffff";
+			dl.append(dd);
+
+			const lol = document.getElementsByClassName('gog')[0];
+			glav_div.append(dl)
+			lol.append(glav_div);
+		}
+	}
+
+	function six(){
+		glav_div.innerHTML = '';
+		if (alert_item.innerHTML == '') {
+			pad()
+			console.log('gog');
+			alert_item.innerHTML = "Unterricht";
+			glav_div.append(alert_item);
+
+			let dl = document.createElement('dl');
+
+			let dt = document.createElement('dt');
+			dt.className = 'dt';
+			dt.innerHTML = "Im Unterricht arbeiten wir mit ";
+			dl.append(dt);
+
+			let dd = document.createElement('dd');
+			dd.className = 'dd';
+			dd.innerHTML = "ffffffffffff";
+			dl.append(dd);
+
+			const lol = document.getElementsByClassName('gog')[0];
+			glav_div.append(dl);
+			lol.append(glav_div);
+		} else {
+			pad()
+			let dl = document.createElement('dl');
+
+			let dt = document.createElement('dt');
+			dt.className = 'dt';
+			dt.innerHTML = "Im Unterricht arbeiten wir mit ";
+			dl.append(dt);
+
+			let dd = document.createElement('dd');
+			dd.className = 'dd';
+			dd.innerHTML = "ffffffffffff";
+			dl.append(dd);
+
+			const lol = document.getElementsByClassName('gog')[0];
+			glav_div.append(dl)
+			lol.append(glav_div);
+		}
+	}
+</script>
+</body>
+</html>

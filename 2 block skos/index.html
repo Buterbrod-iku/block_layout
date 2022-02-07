@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<main>
+		<div class="left">
+			<p class="p_left">Lorem, ipsum.</p>
+		</div>
+		<div class="right">
+			<p class="p_right">Lorem, asddddd.</p>
+		</div>
+	</main>
+
+
+<script type="text/javascript">
+	let rg = document.getElementsByClassName('right')[0]
+	let lf = document.getElementsByClassName('left')[0]
+	let main = document.getElementsByTagName('main')[0]
+	let pl = document.getElementsByClassName('p_left')[0]
+	let pr = document.getElementsByClassName('p_right')[0]
+	rg.onmouseover = function() {
+		lf.style.width = '0';
+		rg.style.width = '100vw';
+		rg.style.transform = 'none';
+		lf.style.transform = 'none';
+		main.style.marginLeft = '0';
+		rg.style.justifyContent = 'center';
+		pl.style.opacity = '0';
+	}
+	rg.onmouseout = function() {
+		lf.style.width = '50%';
+		rg.style.width = '50%';
+		rg.style.transform = ' translateX(0) skewX(-10deg)';
+		lf.style.transform = ' translateX(0) skewX(-10deg)';
+		main.style.marginLeft = '-5vw';
+		pl.style.opacity = '1';
+	}
+	lf.onmouseover = function() {
+		rg.style.width = '0';
+		lf.style.width = '100vw';
+		rg.style.transform = 'none';
+		lf.style.transform = 'none';
+		main.style.marginLeft = '0';
+		lf.style.justifyContent = 'center';
+		pl.style.textAlign = 'center';
+		pl.style.position = 'relative';
+		pr.style.opacity = '0';
+	}
+	lf.onmouseout = function() {
+		lf.style.width = '50%';
+		rg.style.width = '50%';
+		rg.style.transform = ' translateX(0) skewX(-10deg)';
+		lf.style.transform = ' translateX(0) skewX(-10deg)';
+		main.style.marginLeft = '-5vw';
+		lf.style.justifyContent = '0';
+		pl.style.position = 'absolute';
+		pr.style.opacity = '1';
+	}
+</script>
+</body>
+</html>
